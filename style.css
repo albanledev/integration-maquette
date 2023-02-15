@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,15 +7,20 @@
   font-weight: 400;
 }
 
+img {
+  cursor: pointer;
+}
+
 body {
   background-color: #1E1E1E;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .burger {
   cursor: pointer;
-  margin-top: 60px;
+  margin-top: 49px;
   margin-left: 30px;
 }
 .burger > div {
@@ -103,7 +108,7 @@ body {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 25% 50% 25%);
+  grid-template-columns: repeat(auto-fit, 25% 45% 30%);
   height: 38.5vw;
   width: 100%;
 }
@@ -165,7 +170,20 @@ body {
     grid-template-columns: 1fr 1fr;
     margin: auto;
     justify-content: center;
-    padding-left: 100px;
+    padding-left: 10vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gridBloc1 {
+    transform: scale(0.8, 0.8) translateX(-50px) translateY(-50px);
+  }
+  .title {
+    transform: translateY(-25px);
+  }
+  .assets {
+    transform: translateY(-30px);
   }
 }
 @media screen and (max-width: 500px) {
@@ -183,5 +201,136 @@ body {
 }
 
 .bloc3 {
-  background-color: red;
+  background-color: #1E1E1E;
+}
+.bloc3 h2:first-child {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 1rem;
+  margin-left: 20px;
+}
+.bloc3 h2:nth-child(3) {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 20px;
+  padding-left: 1rem;
+}
+.bloc3 .transactions {
+  font-size: 19px;
+  width: 100%;
+  transform: scale(0.9, 0.9) translateX(-50px) translateY(-30px);
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.bloc3 .transactions .crypto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+  font-family: "Inter", sans-serif;
+  margin-top: 5px;
+  margin-left: 50px;
+}
+.bloc3 .transactions .crypto > div {
+  line-height: 25px;
+}
+.bloc3 .transactions .crypto > div p {
+  font-weight: 600;
+}
+.bloc3 .transactions .crypto > div .gray {
+  color: #fff;
+  opacity: 0.7;
+}
+.bloc3 .transactions .crypto > div .green {
+  color: #4AD619;
+}
+.bloc3 .transactions .crypto > div .red {
+  color: #D61919;
+}
+.bloc3 .bitcoin, .bloc3 .ethereum {
+  width: 90%;
+  margin: auto;
+  height: 103px;
+  background-color: yellow;
+  margin-top: 15px;
+  border-radius: 30px;
+  font-family: "Inter", sans-serif;
+}
+.bloc3 .bitcoin img, .bloc3 .ethereum img {
+  width: 50%;
+  height: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.bloc3 .bitcoin, .bloc3 .ethereum {
+  background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
+  display: flex;
+  position: relative;
+  line-height: 18px;
+}
+.bloc3 .bitcoin .flexBit, .bloc3 .ethereum .flexBit {
+  padding-bottom: 20px;
+}
+.bloc3 .bitcoin p, .bloc3 .ethereum p {
+  padding-left: 20px;
+  font-size: smaller;
+}
+.bloc3 .bitcoin .value, .bloc3 .ethereum .value {
+  position: absolute;
+  bottom: 10px;
+  right: 45px;
+  font-weight: 600;
+  font-size: 19px;
+}
+.bloc3 .bitcoin .augmente, .bloc3 .ethereum .augmente {
+  font-size: larger;
+}
+.bloc3 .ethereum {
+  background: linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%, rgba(255, 255, 255, 0.7) 91.33%);
+  color: #000;
+}
+.bloc3 .ethereum > div > div > img {
+  margin-left: 5px;
+}
+
+.decale {
+  transform: translateX(10px);
+}
+
+.bloc2 .parent {
+  line-height: 33px;
+  font-family: "Inter", sans-serif;
+  margin-top: 20px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bloc2 .parent .balance {
+  font-weight: 900;
+  opacity: 0.8;
+  font-size: 20px;
+}
+.bloc2 .parent .price {
+  font-size: 23px;
+  font-weight: 700;
+}
+.bloc2 .parent span {
+  background-color: #FAFF00;
+  color: #000;
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.bloc2 .parent .cost {
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: 20px;
+}
+.bloc2 .parent .items {
+  width: 50%;
+  height: 50px;
+  background-color: #292727;
+  border-radius: 17px;
 }/*# sourceMappingURL=style.css.map */
