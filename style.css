@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
+  font-weight: 400;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 }
 
 .flexHeader {
-  padding-top: 54px;
+  padding-top: 40px;
   display: flex;
   width: 75%;
   align-items: center;
@@ -86,7 +87,7 @@ body {
 
 .profil {
   position: absolute;
-  top: 54px;
+  top: 40px;
   right: 19px;
 }
 
@@ -102,10 +103,85 @@ body {
 }
 .grid {
   display: grid;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: repeat(auto-fit, 25% 50% 25%);
   height: 38.5vw;
   width: 100%;
 }
 .grid > .bloc1 {
+  background-color: 0;
+  padding-top: 40px;
+}
+.grid > .bloc1 > button {
+  background-color: green;
+  padding: 1rem;
+  background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
+  border-radius: 17px;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 25px;
+  height: 65px;
+  width: 250px;
+  margin: auto;
+}
+.grid > .bloc1 > button > p {
+  font-size: 25px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  line-height: 38px;
+}
+.grid > .bloc1 > button > p > img {
+  display: block;
+  padding-left: 10px;
+}
+
+.gridBloc1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 40px;
+  margin-left: 80px;
+}
+.gridBloc1 > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+  color: #fff;
+}
+.gridBloc1 > div .text {
+  opacity: 0.8;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gridBloc1 {
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    justify-content: center;
+    padding-left: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .text {
+    display: none;
+  }
+  .gridBloc1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 20px;
+    justify-content: center;
+  }
+}
+.bloc2 {
+  background-color: #1970D6;
+}
+
+.bloc3 {
   background-color: red;
 }/*# sourceMappingURL=style.css.map */
