@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body{
+    background-color:#1E1E1E ;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+
+}
+
+.burger{
+
+    cursor: pointer;
+    margin-top: 60px;
+    margin-left: 30px;
+
+    &>div{
+        background-color: #fff;
+        border-radius: 10px;
+        gap: 10px;
+        width: 40px;
+        height: 7px;
+        margin-top: 8px;
+
+
+    }
+}
+.flexHeader{
+    padding-top: 54px;
+    display: flex;
+    
+    width: 75%;
+    
+    align-items: center;
+    margin-left: 5vw;
+
+    p{
+        font-size: 30px;
+        padding-right: 5vw;
+    }
+
+    .cloche{
+        position: relative;
+    
+    
+>img{
+        &::after{
+            content: "eza";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 0;
+            right: 0;
+            background-color: #6C1182;
+            border-radius: 100%;
+
+        }
+    }
+    }
+    input{
+        background-color: #fff;
+        width: 30vw;
+        border-radius: 15px;
+        height: 45px;
+        padding:10px 13px 10px 70px;
+        align-items: center;
+        line-height: 1em;
+        font-size: 1.4em;
+        margin-right: 5vw;
+        
+
+        &::placeholder{
+            line-height: 2.5;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4em;
+            color: #000;
+
+        }
+    }
+    
+}
+
+.searchbar{
+    position: relative;
+
+    &>img{
+        position: absolute;
+        left: 20px;
+        top: 5px;
+
+    }
+}
+.profil{
+    position: absolute;
+    top: 54px;
+    right: 19px;
+     
+}
+
+
+
+
+@media screen and (max-width:1037px) {
+    .flexHeader{
+        display: none;
+    }
+}
+
+@media screen and (min-width:1037px) {
+    .burger{
+        display: none;
+
+    }
+}
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    height: 38.5vw;
+    width: 100%;
+
+    &>.bloc1{
+        background-color: red;
+    }
+}
