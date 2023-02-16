@@ -108,13 +108,14 @@ body {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 25% 45% 30%);
+  grid-template-columns: repeat(auto-fit, 20% 50% 30%);
   height: 38.5vw;
   width: 100%;
 }
 .grid > .bloc1 {
   background-color: 0;
   padding-top: 40px;
+  position: relative;
 }
 .grid > .bloc1 > button {
   background-color: green;
@@ -182,9 +183,6 @@ body {
   .title {
     transform: translateY(-25px);
   }
-  .assets {
-    transform: translateY(-30px);
-  }
 }
 @media screen and (max-width: 500px) {
   .text {
@@ -196,10 +194,6 @@ body {
     justify-content: center;
   }
 }
-.bloc2 {
-  background-color: #1970D6;
-}
-
 .bloc3 {
   background-color: #1E1E1E;
 }
@@ -218,7 +212,7 @@ body {
 .bloc3 .transactions {
   font-size: 19px;
   width: 100%;
-  transform: scale(0.9, 0.9) translateX(-50px) translateY(-30px);
+  transform: translateX(-50px);
   margin-left: 20px;
   margin-top: 10px;
 }
@@ -251,7 +245,7 @@ body {
 .bloc3 .bitcoin, .bloc3 .ethereum {
   width: 90%;
   margin: auto;
-  height: 103px;
+  height: 170px;
   background-color: yellow;
   margin-top: 15px;
   border-radius: 30px;
@@ -306,6 +300,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .bloc2 .parent .balance {
   font-weight: 900;
@@ -329,8 +324,115 @@ body {
   font-size: 20px;
 }
 .bloc2 .parent .items {
-  width: 50%;
+  width: 57%;
   height: 50px;
   background-color: #292727;
   border-radius: 17px;
+  display: inline-flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 10px;
+}
+.bloc2 .parent .items > * {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.bloc2 .parent .items .active {
+  background-color: #0D0C0C;
+  padding: 3px 15px;
+  border-radius: 17px;
+}
+
+.graphe {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.titles h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.titles .grise {
+  opacity: 0.7;
+}
+
+.trade {
+  background-color: #20232B;
+  display: grid;
+  justify-content: center;
+  border-radius: 30px;
+  padding-left: 25px;
+  padding-top: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  align-items: center;
+  gap: 2px;
+  width: 95%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: auto;
+}
+.trade:last-child {
+  margin-top: 20px;
+}
+.trade:first-child {
+  padding-left: 20px;
+}
+.trade .grise {
+  opacity: 0.7;
+}
+.trade .blue {
+  color: #1970D6;
+}
+.trade .purple {
+  color: #6C1182;
+}
+.trade .green {
+  color: #4AD619;
+  font-weight: 600;
+}
+.trade .red {
+  font-weight: 600;
+  color: #D61919;
+}
+.trade .tradeButton {
+  background-color: #000;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
+.trade .reduc {
+  transform: scale(0.8, 0.8);
+}
+
+.exit {
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.exit > span {
+  opacity: 0.7;
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  .trade {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
