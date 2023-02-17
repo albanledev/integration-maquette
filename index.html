@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Intégration Alban de Braquilanges</title>
 </head>
 <body>
@@ -17,6 +18,7 @@
 <div class="flexHeader">
     <div><img src="assets/header/Logo.png" alt=""></div>
     <p>Hi, Rogers</p>
+    <div></div>
     <div class='searchbar'><img src='assets/header/search.png'><input type="text" placeholder="Search"></div>
 
     <div class="cloche"><img src="assets/header/cloche.png" alt=""></div>
@@ -31,17 +33,26 @@
 
     <button><p><img src="assets/bloc1/iconenoir.png" alt="">Dashboard</p></button>
 
-    <div class="gridBloc1">
-      <div><div><img src="assets/bloc1/iconeblanche.png" alt=""></div><div class="text">Invoices</div></div>
-      <div><div><img src="assets/bloc1/client.png" alt=""></div><div class="text">clients</div></div>
-      <div><div><img src="assets/bloc1/box.png" alt=""></div><div class="text">Products</div></div>
-      <div><div><img src="assets/bloc1/lettre.png" alt=""></div><div class="text">Messages</div></div>
-      <div><div><img src="assets/bloc1/settings.png" alt=""></div><div class="text">Settings</div></div>
-      <div><div><img src="assets/bloc1/aide.png" alt=""></div><div class="text">Help</div></div>
+        <div class="flexx">
+            <div class="gridBloc1">
+                <div><div><img src="assets/bloc1/iconeblanche.png" alt=""></div><div class="text">Invoices</div></div>
+                <div><div><img src="assets/bloc1/client.png" alt=""></div><div class="text">clients</div></div>
+                <div><div><img src="assets/bloc1/box.png" alt=""></div><div class="text">Products</div></div>
+                <div><div><img src="assets/bloc1/lettre.png" alt=""></div><div class="text">Messages</div></div>
+                <div><div><img src="assets/bloc1/settings.png" alt=""></div><div class="text">Settings</div></div>
+                <div><div><img src="assets/bloc1/aide.png" alt=""></div><div class="text">Help</div></div>
+          
+              </div>
+          
+          
+              <div class='exit'><img src="assets/bloc1/exit.png" alt="logout"><span>Log Out</span></div>
+              
+        </div>
 
-    </div>
 
-    <div class='exit'><img src="assets/bloc1/exit.png" alt="logout"><span>Log Out</span></div>
+
+
+
 
 
 </div>
@@ -60,14 +71,45 @@
     </div>
     </div>
 
-    <img class='graphe' src="assets/bloc2/graphe.png" alt="graphe">
+<!-- <div>    <img class='graphe' src="assets/bloc2/graphe.png" alt="graphe"></div> -->
+<div class="wesh">
+<div class="flexxx">
+    <div class="flexGraphe">
+        <div><button>1H</button></div>
+        <div><button class="activeParameter">1D</button></div>
+        <div><button>3D</button></div>
+        <div><button>1W</button></div>
+        <div><button>1M</button></div>
+        <div class="imgg"><img src="assets/bloc2/calendrier.png" alt=""></div>
+    </div>
 
+<div class='flexOptions'>
+    <div>
+        <select name="pets" id="pet-select">
+            <img src="assets/bloc2/bitbit.png" alt="">
+            <option value="">BTC</option>
+        </select>
+            </div>   
+        
+            <div><img src="assets/bloc2/fleches.png" alt=""></div>
+            
+            <div>
+                <select name="pets" id="pet-select">
+                    <img src="assets/bloc2/ethete.png" alt="">
+                    <option value="">ETH</option>
+                </select>
+                    </div>
+</div>
+</div>
+    <canvas id="myChart"></canvas>
+  </div>
 <div class="titles">
     <h2>Recent transactions</h2>
     <h2 class="grise">See all coins</h2>
 </div>
 
 <div class="trade">
+    
     <div><img src="assets/bloc2/bitcoin2.png" alt="Bitcoin" class="reduc"></div>
     <div><div>Bitcoin</div><div class="grise">BTC</div></div>
     <div><div>Market Cap</div><div class="blue">$40,243.70</div></div>
@@ -168,6 +210,7 @@
             <div class="bitcoin">
                 <div class="flexBit">
                     <div><img src="assets/bloc3/bitAsset.png" alt="Bitcoin"></div>
+                    
                     <p>Bitcoin</p>
                     <p class="augmente">121,6450.45</p>
 
@@ -204,7 +247,15 @@
 
 </div>
 
+<!-- <div class='exit'><img src="assets/bloc1/exit.png" alt="logout"><span>Log Out</span></div> -->
 
+
+
+
+
+
+
+<script src='script.js'></script>
 
 </body>
 </html>

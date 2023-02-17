@@ -7,6 +7,14 @@
   font-weight: 400;
 }
 
+button {
+  cursor: pointer;
+}
+
+* > input {
+  outline: none;
+}
+
 img {
   cursor: pointer;
 }
@@ -35,9 +43,10 @@ body {
 .flexHeader {
   padding-top: 40px;
   display: flex;
-  width: 75%;
+  width: 80%;
   align-items: center;
   margin-left: 5vw;
+  justify-content: space-evenly;
 }
 .flexHeader p {
   font-size: 30px;
@@ -59,25 +68,26 @@ body {
 }
 .flexHeader input {
   background-color: #fff;
-  width: 30vw;
+  width: 25vw;
   border-radius: 15px;
   height: 45px;
   padding: 10px 13px 10px 70px;
   align-items: center;
   line-height: 1em;
+  align-content: center;
   font-size: 1.4em;
   margin-right: 5vw;
 }
 .flexHeader input::-moz-placeholder {
-  line-height: 2.5;
+  line-height: 2;
   font-family: "Inter", sans-serif;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #000;
 }
 .flexHeader input::placeholder {
-  line-height: 2.5;
+  line-height: 2;
   font-family: "Inter", sans-serif;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #000;
 }
 
@@ -115,7 +125,8 @@ body {
 .grid > .bloc1 {
   background-color: 0;
   padding-top: 40px;
-  position: relative;
+  position: sticky;
+  top: 500px;
 }
 .grid > .bloc1 > button {
   background-color: green;
@@ -128,7 +139,7 @@ body {
   display: flex;
   gap: 25px;
   height: 65px;
-  width: 250px;
+  width: 230px;
   margin: auto;
 }
 .grid > .bloc1 > button > p {
@@ -179,9 +190,6 @@ body {
 @media screen and (min-width: 1000px) {
   .gridBloc1 {
     transform: scale(0.8, 0.8) translateX(-50px) translateY(-50px);
-  }
-  .title {
-    transform: translateY(-25px);
   }
 }
 @media screen and (max-width: 500px) {
@@ -250,6 +258,7 @@ body {
   margin-top: 15px;
   border-radius: 30px;
   font-family: "Inter", sans-serif;
+  margin-bottom: 30px;
 }
 .bloc3 .bitcoin img, .bloc3 .ethereum img {
   width: 50%;
@@ -261,7 +270,7 @@ body {
   background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
   display: flex;
   position: relative;
-  line-height: 18px;
+  line-height: 30px;
 }
 .bloc3 .bitcoin .flexBit, .bloc3 .ethereum .flexBit {
   padding-bottom: 20px;
@@ -278,7 +287,7 @@ body {
   font-size: 19px;
 }
 .bloc3 .bitcoin .augmente, .bloc3 .ethereum .augmente {
-  font-size: larger;
+  font-size: 1.8em;
 }
 .bloc3 .ethereum {
   background: linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%, rgba(255, 255, 255, 0.7) 91.33%);
@@ -301,6 +310,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 .bloc2 .parent .balance {
   font-weight: 900;
@@ -419,9 +429,6 @@ body {
 }
 
 .exit {
-  position: absolute;
-  bottom: 30px;
-  left: 70px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -432,7 +439,116 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
+  .wesh {
+    width: 100%;
+    height: 35vh;
+  }
   .trade {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .exit {
+    display: none;
+  }
+  div.gridBloc1 {
+    margin-left: 5vw;
+    margin: auto;
+    gap: 17px;
+  }
+  div.gridBloc1 > div > div {
+    margin-left: 1vw;
+  }
+}
+.exit2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .exit2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bitcoin, .ethereum {
+    width: 100px !important;
+    display: inline-flex !important;
+    height: 85px !important;
+    margin-left: 17vw !important;
+  }
+  .bitcoin > div > div > img, .ethereum > div > div > img {
+    width: 80% !important;
+    padding-left: 40px;
+  }
+  .bitcoin > div > p, .bitcoin > .value, .ethereum > div > p, .ethereum > .value {
+    display: none;
+  }
+}
+.flexx {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.flexx > .exit {
+  margin-left: 65px;
+}
+
+.flexGraphe {
+  display: grid;
+  grid-template-columns: 37px 37px 37px 37px 37px 37px;
+  gap: 1vw;
+}
+.flexGraphe > div > button {
+  background-color: #000;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 5px;
+}
+.flexGraphe .imgg {
+  background-color: #000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+
+.wesh {
+  background-color: #20232B;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.flexxx {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeParameter {
+  background-color: white !important;
+  color: black !important;
+}
+
+.flexOptions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+.flexOptions > div > select {
+  height: 35px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  opacity: 0.7;
+  padding: 10px;
+}
+.flexOptions > div > select > option {
+  background-color: #000;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
